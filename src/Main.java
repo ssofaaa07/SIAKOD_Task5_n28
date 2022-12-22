@@ -1,5 +1,8 @@
+import mainform.MainForm;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        MainForm form = new MainForm();
+        form.setVisible(true);
     }
 }
