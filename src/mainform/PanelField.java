@@ -5,21 +5,21 @@ import java.awt.*;
 
 public class PanelField extends JPanel {
 
-    public int[][] tableField;
+    public String[][] tableField;
 
     public final int SIZE_CELLS = 30;
 
-    public PanelField(int[][] tableField) {
+    public PanelField(String[][] tableField) {
         this.tableField = tableField;
     }
 
     public PanelField() {
         if (tableField == null) {
-            this.tableField = new int[][]{{0}};
+            this.tableField = new String[][]{{"0"}};
         }
     }
 
-    public void setTableField(int[][] tableField) {
+    public void setTableField(String[][] tableField) {
         this.tableField = tableField;
     }
 
@@ -37,11 +37,11 @@ public class PanelField extends JPanel {
 
             for (int row = 0; row < tableField.length; row++) {
                 for (int col = 0; col < tableField[0].length; col++) {
-                    if (tableField[row][col] == 1) {
+                    if (tableField[row][col].equals("1")) {
                         g.setColor(new Color(50, 50, 50));
                         g.fillRect(col * SIZE_CELLS, row * SIZE_CELLS, SIZE_CELLS, SIZE_CELLS);
                     }
-                    if (tableField[row][col] == 2) {
+                    if (tableField[row][col].equals("2")) {
                         g.setColor(new Color(10, 190, 10));
                         g.fillRect(col * SIZE_CELLS, row * SIZE_CELLS, SIZE_CELLS, SIZE_CELLS);
                     }
