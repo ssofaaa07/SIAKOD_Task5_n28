@@ -80,7 +80,6 @@ public class CreateAdjMatrix {
                         }
                         opened[i][col] = true;
                         que.add(new String[][]{{Integer.toString(i)}, {Integer.toString(col)}});
-//                        go(i, col);
                     }
                 }
             }

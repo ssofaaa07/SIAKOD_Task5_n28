@@ -23,9 +23,7 @@ public class MainForm extends JFrame{
 
     private OrientedGraph graph;
     private CreateAdjMatrix createAdjMatrix;
-
     private AlgorithmFF algorithm;
-
     public String[][] getFieldMatrix() {
         return fieldMatrix;
     }
@@ -35,9 +33,8 @@ public class MainForm extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
         this.setLocation(100, 100);
-//        this.setLocationRelativeTo(null);
         this.pack();
-        this.setSize(520,800);
+        this.setSize(520,700);
 
         JTableUtils.initJTableForArray(tableTask, 25, true, true, true, true);
         tableTask.setRowHeight(25);
@@ -54,8 +51,6 @@ public class MainForm extends JFrame{
                 {"0", "1", "0", "0", "0", "0", "0", "0"},
                 {"0", "1", "1", "1", "1", "1", "1", "0"},};
 
-//        createAdjMatrix = new CreateAdjMatrix(fieldMatrix);
-//        graph = new OrientedGraph(createAdjMatrix.arrayToMatrixForGraph());
         JTableUtils.writeArrayToJTable(tableTask, fieldMatrix);
 
         buttonStart.addActionListener(new ActionListener() {
